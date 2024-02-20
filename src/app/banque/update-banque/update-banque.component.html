@@ -1,0 +1,27 @@
+<h1 align="center">Les Banques</h1>
+<br>
+
+Pour consulter la liste des banques :
+<a class="btn btn-primary" href="/banques">Liste Banques</a>
+<br><br>
+
+<h3 align="center" style="background-color: rgb(254, 0, 161);">Modifier une banque</h3>
+<br>
+<div style="width: 50%; margin-left: 25%;">
+  <div class="form-group">
+    <label for="nb">Nom de la banque</label>
+    <input id="nb" type="text" [(ngModel)]="nom" class="form-control">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="cb">Capital de la banque</label>
+    <input id="cb" type="number" [(ngModel)]="capital" class="form-control">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="ab">Adresse de la banque</label>
+    <input id="ab" type="text" [(ngModel)]="adresse" class="form-control">
+  </div>
+  <br>
+  <button (click)="updateBanque()" class="btn btn-primary">Mettre à jour</button>
+</div>

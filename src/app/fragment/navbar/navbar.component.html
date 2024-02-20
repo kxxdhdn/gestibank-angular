@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <span id="home-icon" class="bi bi-house-fill" 
+          [ngClass]="{ 'active-link': isLinkActive('/') }" 
+          style="font-size: 25px; color: rgb(254, 0, 161);" arial-label="Home"></span>
+  </a>
+
+  <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/banques']" [ngClass]="{ 'active-link': isLinkActive('/banques') }">Banques</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/comptes']" [ngClass]="{ 'active-link': isLinkActive('/comptes') }">Comptes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/contact']" [ngClass]="{ 'active-link': isLinkActive('/contact') }">Contactez-nous</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 d-flex justify-content-end">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+        <input class="form-control mr-2" type="search" placeholder="" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+      </div>
+    </form>
+  </div>
+</nav>
+<router-outlet></router-outlet>

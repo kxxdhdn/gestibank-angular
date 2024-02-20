@@ -1,0 +1,29 @@
+<h1 align="center">Les Banques</h1>
+<br>
+
+Pour consulter la liste des banques :
+<a class="btn btn-primary" href="/banques">Liste Banques</a>
+<br><br>
+
+<h3 align="center" style="background-color: rgb(254, 0, 161);">Ajouter une banque</h3>
+<br>
+<div style="width: 50%; margin-left: 25%;">
+  <form #formAddBanque="ngForm" (ngSubmit)="createBanque(formAddBanque)">
+    <div class="form-group">
+      <label for="nb">Nom de la banque</label>
+      <input id="nb" type="text" ngModel name="nom" class="form-control" placeholder="Nom Banque">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="cb">Capital de la banque</label>
+      <input id="cb" type="number" ngModel name="capital" class="form-control" placeholder="0.0">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="ab">Adresse de la banque</label>
+      <input id="ab" type="text" ngModel name="adresse" class="form-control" placeholder="Adresse Banque">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+  </form>
+</div>

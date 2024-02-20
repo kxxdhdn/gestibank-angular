@@ -1,0 +1,4 @@
+.active-link {
+  font-weight: bold;
+  text-shadow: rgb(254, 0, 161) 0px 0px 20px; /* color x-offset y-offset blur */
+}
